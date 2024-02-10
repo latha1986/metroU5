@@ -1,0 +1,21 @@
+{% extends 'theme.html' %}
+{% block title %}<title>fruits</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+{% for x in pp %}
+    <div class="col-md-3">
+<div class="card" >
+  <img src="{{x.image}}" class="card-img-top" alt="..." style="width:200px;height:300px;">
+  <div class="card-body">
+    <h5 class="card-title">{{x.name}}</h5>
+    <p class="card-text">Rs.{{x.price}}</p>
+    <p class="card-text">Stock:{{x.stock}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
